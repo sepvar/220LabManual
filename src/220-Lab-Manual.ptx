@@ -182,7 +182,7 @@
     </preface>
 
     <preface xml:id="anything-PDF"><title>Download the PDF here</title>
-    <p>A full PDF version of this document can be found at <url href="http://physics.thomasmore.edu/labs/220/anything-lab.pdf">anything-lab.pdf (646 kB)</url></p>
+    <p>A full PDF version of this document can be found at <url href="http://physics.thomasmore.edu/labs/220/anything-lab.pdf">anything-lab.pdf (659 kB)</url></p>
     </preface>
 
 </frontmatter>
@@ -414,7 +414,7 @@
         <ul>
                 <li><p>The volume of a rectangular block is <m>V = l w h</m> (length times width times height). You need to arbitrarily choose which dimension is which.</p></li>
                 <li><p>The volume of a cylinder is <m>V = \pi r^2 h = \deq \frac{\pi D^2 h}{4}</m> (the cross-sectional area times the height).  Technically the formula is in terms of the radius, but it is more accurate to measure the diameter.</p></li>
-                <li><p>The volume of a sphere is <m>V = \frac{4}{3} \pi R^2</m>. </p></li>
+                <li><p>The volume of a sphere is <m>V = \frac{4}{3} \pi R^3</m>. </p></li>
         </ul></p></li>
         <li><p> Using the <xref ref="ss-propagation" text="title">rules of propagation of uncertainty</xref>, compute the uncertainty in the volume for each.</p></li>
     </ul></p>
@@ -501,7 +501,7 @@
     \revision{August 24, 2009}{Intro list as an enumerated TeX list.}
     -->
 
-    <p>A PDF version might be found at <url href="http://physics.thomasmore.edu/labs/220/measurement.pdf">measurement.pdf (329 kB)</url></p>
+    <p>A PDF version might be found at <url href="http://physics.thomasmore.edu/labs/220/measurement.pdf">measurement.pdf (331 kB)</url></p>
     <p>Copyright and license information can be found <url href="http://physics.thomasmore.edu/labs/220/anything-colophon.html">here</url>.</p>
     </conclusion>
 </chapter>
@@ -512,41 +512,167 @@
 
 <chapter xml:id="c-motion"><title>Measuring Motion</title>
 
+<objectives>
+        <ul>
+                <li><p>By measuring various quantities with special attention to the precision of the instruments,
+                <ul>
+                        <li><p>Predict the length of the hallway,</p></li>
+                        <li><p>Predict the height of a lab table, and </p></li>
+                        <li><p>Find a hidden treasure.</p></li>
+                </ul></p></li>
+        </ul>
+</objectives>
+
+<introduction>
+<p>Last week, you learned about the uncertainty in some measuring equipment.  This week you will build a more visceral understanding of these ideas and test the concepts of consistency and reproducibility.  Throughout this experiment, you should bear in mind that <q>more data is better</q>.</p>
+</introduction>
+
 <section><title>Procedure</title>
-<p>There are several exercises and you will do them in different orders.
-<ol>
-        <li><p>Measure the length of the hallway from end to end by pacing it off.  Each person in the group should do this three times.  Indicate the variation of each person and the variation between people.  Devise a way to determine the distance in a more reliable unit. Submit your best guess for the actual distance.  The group that gets closest to the right answer gets 5 extra points on their report.  All groups that have the right value to within uncertainty also gets 5 extra points on their report.  </p></li>
-        <li><p>One group at a time, collect 5 pennies.  Go outside, up the stairs, to the large flat grassy area (the <q>quad</q>).  Place all five pennies some place in the grass, all together and write out the location based on the number of paces.  Your written instructions should be intended to help somebody actually find the pennies: indicate an <q>origin</q>, choose a <q>coordinate system</q>, and give specific clear instructions for where to walk.  Your instructions must have at least one right-angle turn, but not more than three right-angle turns.  All turns must be right-angles.  Your group will have to secretly choose which lab-partner will be pacing off the steps and you are not allow to say <em>which</em> person it was.  When you return to lab, give your instructions to the professor, who will make copies and distribute them.  The assignment is for each group to collect one penny from each <q>treasure</q>.  At the end each group will go outside and find out how many pennies are missing from their buried treasure.</p></li>
-        <li><p>Go out in the hallway and find a corner at ground level (just above the vertically oriented bricks).
-            <ul>
-                <li><p>From this location, count five bricks over and fifteen bricks up.  Mark that brick with a piece of chalk.</p></li>
-            </ul>
-            If our count were off by <m>\pm 1\unit{brick}</m> for every five bricks, then our measurements are actually <m>5\pm 1\unit{brick}</m> and <m>15\pm3\unit{bricks}</m>.
-            <ul>
-                <li><p>Repeat your attempt to identify the same brick but this time go over four <m>(5-1)</m> and up twelve <m>(15-3)</m>.  This is the smallest error.</p></li>
-                <li><p>Repeat your attempt to identify the same brick but this time go over six <m>(5+1)</m> and up eighteen <m>(15+3)</m>.  This is the largest error.</p></li>
-            </ul>
-            We might also make mixed errors where one is too large but the other is too small.
-            <ul>
-                <li><p>Repeat your attempt to identify the original brick but this time go over four <m>(5-1)</m> and up eighteen <m>(15+3)</m>. </p></li>
-                <li><p>Repeat your attempt to identify the original brick but this time go over six <m>(5+1)</m> and up twelve <m>(15-3)</m>.</p></li>
-            </ul>
-            Identify the size of the region by finding the area of this region in terms of <m>\unit{bricks^2}</m>, that is, multiply the width of bricks by the height of bricks in this region.
-            </p></li>
-        <li><p>Use PASCO to measure your speed.</p></li>
-        <li><p>I have a horse who is 17.2 hands.  Use the internet to find out if a 17-hand horse is large or small.  Determine what this number measures.  How many <q>hands</q> is your lab table?  What is this number in the metric system?  Each of these numbers should be accompanied by a measure of the precision.</p></li>
-</ol></p>
+<p>There are three sections to the experiment; in each you will standardize a technique, use the technique to make a measurement (paying close attention to the variation within your group), and then verify that measurement against other groups. </p>
+<activity xml:id="a-measure-treasure">
+        <task xml:id="t-calibrate"><introduction><p><alert>Calibrate your paces <mdash /> Do this first</alert></p></introduction>
+                <task><statement><p>Each person in the group should do this 3-5 times to check your consistency.
+                        <ul>
+                                <li><p>Place your heel at an identifiable origin. See <xref ref="h-origin" text="type-local" />.</p></li>
+                                <li><p>Take five paces in as natural and calm a manner as you are able.  See <xref ref="h-scale" text="type-local" />.</p></li>
+                                <li><p>Measure the distance from your first heel to your fifth heel.  See <xref ref="h-five" text="type-local" />.</p></li>
+                                <li><p>Note the 5-step distance and variation.  Use the average value of these measurements as your personal <q>standard step</q>, include an uncertainty such that when added to or subtracted from the average, it encapsulates all of your measurements.  Divide the average and the uncertainty by five: This is your <q>conversion to metric</q> per step.  You can now measure distances in paces.</p></li>
+                                <li><p>Note Analysis <xref ref="q-calibrate" text="type-global" />.</p></li>
+                        </ul>
+                        </p>
+                        </statement>
+                        <hint xml:id="h-origin"><title>Set your origin</title><p>Place your heel against a wall or at the crack of a floor tile or on the edge of a piece of masking tape.</p></hint>
+                        <hint xml:id="h-scale"><title>Set your scale</title><p>Since you will be self-conscious, it will be difficult to be consistent.  You might need to practice <q>being casual</q>.</p></hint>
+                        <hint xml:id="h-five"><title>Counting to five</title><p>Remember that you are measuring five paces.  This means that your first foot (the one at the origin) is <q>zero</q> so that your first <em>step</em> is <q>one</q>.</p></hint>
+                </task>
+        </task>
+        <task><introduction><p><alert>Do these three in any order</alert></p></introduction>
+                <task xml:id="t-pace"><statement><p>Pace the Hallway:
+                        <ul>
+                                <li><p>Measure the length of the hallway from end to end by pacing it off.  Each person in the group should do this three times and should gauge the final fraction of a pace.</p></li>
+                                <li><p>As with the calibration, each person should average their number of paces and indicate their uncertainty.  Convert paces to meters, with uncertainty.</p></li>
+                                <li><p>Using the distance in meters from each person in the group, average these values and provide two measures of uncertainty:
+                                        <ul>
+                                                <li><p><em>your conservative estimate</em>: an uncertainty that encompasses the maximum and minimum of all group members (the largest variation in the measurements), and </p></li>
+                                                <li><p><em>your <q>best</q> estimate</em>: an uncertainty that actually reflects the range that you believe the result to be within.</p></li>
+                                        </ul></p></li>
+                                <li><p>Submit these answers to the instructor.  Every individual who's group-measurement is consistent with the right answer (has the correct value within their uncertainty) gets 2 pts added to their lab report grades.  The individuals in the group that is not only consistent with the right answer but also has the <em>smallest</em> relative uncertainty gets 5 extra points on their reports.</p></li>
+                                <li><p>Note Analysis <xref ref="q-pace" text="type-global" />.</p></li>
+                        </ul></p></statement>
+                </task>
+                <task xml:id="t-treasure"><statement><p><alert>Do this one group at a time.</alert> Create a treasure map: You are going to place a collection of pennies some place in an open area in the grass and create a <q>treasure map</q> to the location based on the number of paces.
+                        Your written instructions should be intended to help somebody actually find the pennies.
+                        <ul>
+                                <li><p>Take 5 pennies (take one more penny than there are groups in the class), a pad of paper, and a pen and go <em>outside</em>, up the stairs, to the large flat grassy area (the <q>quad</q>).</p></li>
+                                <li><p>Identify an obvious starting location (the origin) and get your bearings.  Assume that while you are in the quad, the science building is <q>north</q>, the cafeteria is <q>south</q>, the back of the theatre/library is <q>west</q>, and the large open space (the Five Seasons) is <q>east</q>. </p></li>
+                                <li><p>Secretly choose which lab-partner will be pacing off the steps and do not tell any other group <em>which</em> person it was.  </p></li>
+                                <li><p>On your paper, write down your origin, choose a cardinal direction (north, south, east, or west), and give specific clear instructions for how far to walk and in what direction.  Your instructions must have at least one right-angle turn, but not more than three right-angle turns.  All turns must be right-angles.</p></li>
+                                <li><p>When you return to lab, give your instructions to the professor, who will make copies and distribute them.</p></li>
+                                <li><p>Note Analysis <xref ref="q-treasure" text="type-global" />.</p></li>
+                        </ul>
+                        Note that at the end of lab, you will need to be able to find your pennies.  Each person in your group will lose one point on their lab report for each penny lost.</p></statement>
+                </task>
+                <task xml:id="t-region"><statement><p>Using vector components, gauge the <q>area of uncertainty</q> when stepping <m>5 \pm 1 \unit{tiles}</m> over and <m>15 \pm 3 \unit{tiles}</m> up.
+                        <ul>
+                                <li><p>Find a large open space on the floor of the lab room.  It should be at least 10-tiles by 20-tiles.  You will also need a <q>two-meter-stick</q> and a protractor.</p></li>
+                                <li><p>Select one tile as the origin.  Place a piece of tape at its <q>bottom-left</q> corner.  Write <q>origin</q> on the tape.
+                                    <ul>
+                                        <li><p>From this location, count five tiles to the right and fifteen tiles up.</p></li>
+                                        <li><p>Mark the bottom-left corner of that tile with a piece of tape.  Write <q>expected</q> on the tape.</p></li>
+                                        <li><p>Measure the distance from the origin to the expected location using the meter-stick.  (In units of tiles, this should be <m>\sqrt{(5\unit{tiles})^2+(15\unit{tiles})^2} = 15.8 \unit{tiles}</m>.)</p></li>
+                                        <li><p>While the meter-stick is aiming from the origin towards the expected location, use the protractor to measure the angle from the horizontal (what you called <q>to the right</q> when you counted five tiles over).</p></li>
+                                    </ul></p></li>
+                                <li><p>To account for the uncertainty, consider the smallest value you might be off by repeating those steps by counting over four <m>(5-1)</m> and up twelve <m>(15-3)</m>.
+                                    <ul>
+                                        <li><p>Mark the bottom-left corner of that tile with a piece of tape.  Write <q>short</q> on the tape.</p></li>
+                                        <li><p>Measure the distance from the origin to the short location using the meter-stick.  (In units of tiles, this should be <m>\sqrt{(4\unit{tiles})^2+(12\unit{tiles})^2} = 12.7 \unit{tiles}</m>.)</p></li>
+                                    </ul></p></li>
+                                <li><p>To account for the uncertainty, consider the largest value you might be off by repeating those steps by counting over six <m>(5+1)</m> and up eighteen <m>(15+3)</m>.
+                                    <ul>
+                                        <li><p>Mark the bottom-left corner of that tile with a piece of tape.  Write <q>long</q> on the tape.</p></li>
+                                        <li><p>Measure the distance from the origin to the long location using the meter-stick.  (In units of tiles, this should be <m>\sqrt{(6\unit{tiles})^2+(18\unit{tiles})^2} = 18.9 \unit{tiles}</m>.)</p></li>
+                                    </ul></p></li>
+                                <li><p>We might also make mixed errors where one is too large but the other is too small.
+                                    <ul>
+                                        <li><p>Repeat these steps but this time go over six <m>(5+1)</m> and up twelve <m>(15-3)</m>.
+                                            <ul>
+                                                <li><p>Mark the bottom-left corner of that tile with a piece of tape.  Write <q>theta 1 <m>(\theta_1)</m></q> on the tape.</p></li>
+                                                <li><p>While the meter-stick is aiming from the origin towards the theta-1 location, use the protractor to measure the angle from the horizontal (what you called <q>to the right</q> when you counted five tiles over).</p></li>
+                                            </ul></p></li>
+                                        <li><p>Repeat these steps but this time go over four <m>(5-1)</m> and up eighteen <m>(15+3)</m>.
+                                            <ul>
+                                                <li><p>Mark the bottom-left corner of that tile with a piece of tape.  Write <q>theta 2  <m>(\theta_1)</m></q> on the tape.</p></li>
+                                                <li><p>While the meter-stick is aiming from the origin towards the theta-2 location, use the protractor to measure the angle from the horizontal (what you called <q>to the right</q> when you counted five tiles over).</p></li>
+                                            </ul></p></li>
+                                    </ul></p></li>
+                                <li><p>Remove all of your tape from the floor.</p></li>
+                                <li><p>Note Analysis <xref ref="q-region" text="type-global" />.</p></li>
+                        </ul></p></statement>
+                </task>
+                <conclusion><p>If you finish these three exercises before the rest of the class, then you can move on to the next portion; but you cannot do that final experiment until everybody has created their treasure map.</p></conclusion>
+        </task>
+        <task xml:id="t-pasco"><statement><p><alert>If you have time between experiments</alert>, turn on the computer and the PASCO interface on the lab table, log in, and open the Capstone program on the desktop.
+                Ask your instructor about the motion sensor and create a velocity versus time graph for: walking slowly away, quickly away, slowly towards, and quickly towards the motion sensor.</p></statement>
+        </task>
+        <task xml:id="t-find"><statement><p>Once all groups have created a treasure map, your instructor will distribute two maps to each group.
+                <ul>
+                        <li><p>One group at a time will go outside, following each map as best they can, and collect one penny from the treasure as evidence of success.  </p></li>
+                        <li><p>After all groups have discovered some treasure, all groups will go out and follow their map to collect the remains of their treasure.</p></li>
+                        <li><p>Note Analysis <xref ref="q-region" text="type-global" />.</p></li>
+                </ul>
+                For each map followed, the group should indicate if their pace-measurement differed from the map and by how much.</p></statement></task>
+</activity>
+
+<!--         <li><p>I have a horse who is 17.2 hands.  Use the internet to find out if a 17-hand horse is large or small.  Determine what this number measures.  How many <q>hands</q> is your lab table?  What is this number in the metric system?  Each of these numbers should be accompanied by a measure of the precision.</p></li>  -->
 
 </section>
 
 <section><title>Analysis</title>
-<p>Determine the length of your pace and convert the pace measurement from your treasure map into meters.  If your measurement might vary by one pace for every ten paces, what is the precision of your measurement?</p>
+
+<p>Please consider the following for each of the tasks in <xref ref="a-measure-treasure" text="type-global" />.
+<ol>
+        <li xml:id="q-calibrate"><p>In <xref ref="t-calibrate" text="type-global" />, if you were to take 35 paces, you would multiply your distance-per-pace times the number of paces, but you would also multiple the uncertainty times the number of paces.  For each person in the group, find the distance and uncertainty (in meters) if that person were to take 35 paces.  You should notice that the uncertainty increases with the number of paces.  This is also the premise of <xref ref="t-region" text="type-global" />.</p></li>
+        <li xml:id="q-pace"><p>In <xref ref="t-pace" text="type-global" />,  your report should show how you chose your conservative estimate of uncertainty and how you chose your best estimate.  These might be the same.  If they are different, you should indicate why you feel your best estimate is better than the conservative estimate.</p></li>
+        <li xml:id="q-treasure"><p>In <xref ref="t-treasure" text="type-global" />,  your report should indicate how you chose the person who set the paces for the treasure map.  Did you choose somebody with a peculiarly large or small pace?  Did you select at random? You should also indicate any sources of uncertainty in creating the map.  Comment on your pace length if you went up or down a hill.  Did you have multiple people pace the path to check the values?  If there was snow, comment on the effect and if you implemented any strategies.</p></li>
+        <li xml:id="q-region"><p>The evaluation of the area in <xref ref="t-region" text="type-global" /> should help you gauge what to do if your treasure map does not lead to an actual treasure (<xref ref="t-find" text="type-global" />).  Your report should include a calculation of the area in the region found.  It should also indicate if the members in your group are exceptionally long-legged or short-legged compared to the other groups.  Describe how this affected the way that you went about searching for the treasure.</p></li>
+</ol></p>
+
 </section>
 
-    <conclusion>
-    <p>(Revised: Jan 6, 2018)</p>
+    <section xml:id="s-mt-report"><title>Your Report</title>
 
-    <p>A PDF version might be found at <url href="http://physics.thomasmore.edu/labs/220/motion.pdf">motion.pdf (57 kB)</url></p>
+    <p>Since this is the first lab, we are not going to require you to do a full lab report as outlined in <xref ref="a-report" text="title" />.</p>
+
+    <p>For this week, please include
+    <ul>
+        <li><p>your identifying information (listed above the abstract)</p></li>
+        <li><p>Abstract: (write this after you've written everything else, but place it at the beginning of the report)  Use the treasure hunt as the primary objective of this experiment and consider the other portions of this lab as mechanisms for calibrating your paces.</p></li>
+        <li><p>(You can skip the Apparatus section this week.)</p></li>
+        <li><p>(You can skip the Theory section this week.)</p></li>
+        <li><p>Procedure: Please describe what you did and how; this should not be too detailed, but should give a reasonable picture.  That is to say, this is a general description of the process, not detailed instructions. Note how you calibrated your measurements and minimized zero-point errors (as appropriate). </p></li>
+        <li><p>Data: Please organize your data into a clear table or set of tables.
+        <ul>
+                <li><p>For <xref ref="t-calibrate" text="type-global" /> your table should clearly indicate your calibration, but should also indicate the others in your group for comparison.</p></li>
+                <li><p>For <xref ref="t-pace" text="type-global" /> you should include enough information to indicate how you found the results you turned in as the length of the hallway.</p></li>
+                <li><p>For <xref ref="t-region" text="type-global" /> draw a picture of the layout and include relevant distances and angles.</p></li>
+                <li><p>Please include your treasure map as well as those you followed.  These should be clearly labelled.</p></li>
+        </ul></p></li>
+        <li><p>Analysis:  There are no graphs for this week.  Your discussion should include a discussion regarding the points mentioned in the analysis section.  This should be organized into paragraphs, each of which address one aspect of the experiment. In each paragraph, you should comment on any sources of uncertainty that you needed to worry about.</p></li>
+        <li><p>Conclusion: This should be a few statements about how some piece of data or some portion of the analysis allowed you to verify or not verify a particular item.  Do not simply answer the following questions, but use the ideas expressed by the questions as a guide for what you should discuss in a more narrative format.  Since there are three topics listed, you should expect to write three short paragraphs.
+        <ul>
+                <li><p>Was your group able to accurately predict the length of the hallway? How did the sources of uncertainty mentioned in the Analysis enable or interfere with this?</p></li>
+                <li><p>Were you able to follow other the treasure maps of the other groups? How did the sources of uncertainty mentioned in the Analysis enable or interfere with this? </p></li>
+                <li><p>Were other groups able to follow your treasure map?  What were the relevant issues (good or bad)?</p></li>
+        </ul></p></li>
+    </ul>
+    Your Procedure and Analysis are probably the longest sections this week.  The Conclusion should always be shorter than the analysis.</p>
+    </section>
+
+
+    <conclusion>
+    <p>(Revised: Jan 13, 2018)</p>
+
+    <p>A PDF version might be found at <url href="http://physics.thomasmore.edu/labs/220/motion.pdf">motion.pdf (128 kB)</url></p>
     <p>Copyright and license information can be found <url href="http://physics.thomasmore.edu/labs/220/anything-colophon.html">here</url>.</p>
     </conclusion>
 </chapter>
